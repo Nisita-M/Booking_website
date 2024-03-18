@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Book Hotel </title>
+</head>
+<body>
+
+    <form method="post" action="/book">
+        <br>
+        <br>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <br>
+        <br>
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required>
+        <br>
+        <br>
+        <label for="ppn">Stay night: </label> night:</label>
+        <input type="number" id="ppn" name="ppn" required>
+        <br>
+        <br>
+        <label for="nop">Num of people: </label>
+        <input type="number" id="nop" name="nop" required>
+        <br>
+        <br>
+        <label for="hotel">Hotel: </label>
+        <select name = "hotel" id="hotel">
+            { % for hotels % }
+            <option value= "{{hotel.name}}">{{hotel.name}}</option>
+        </select>
+        <input type="submit" value="submit">
+    </form>
+    
+</body>
+</html>
